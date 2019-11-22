@@ -134,7 +134,7 @@ begin
   else
     Application.BringToFront;        // 提到前面显示
   Show;
-  Application.BringToFront;        // 提到前面显示
+  Application.BringToFront;          // 提到前面显示
 end;
 
 { Double Click TrayIcon. }
@@ -185,9 +185,9 @@ end;
 procedure TForm1.WMSysCommand(var Msg: TWMSysCommand);
 begin
   inherited;
-  if Msg.CmdType = SC_MINIMIZE then // 窗口收到最小化消息
+  if Msg.CmdType = SC_MINIMIZE then
   begin
-    Application.Minimize; // 最小化程序
+    Application.Minimize;                    // 最小化程序
     ShowWindow(Application.Handle, SW_HIDE); // 隐藏任务栏图标
   end;
 end;
